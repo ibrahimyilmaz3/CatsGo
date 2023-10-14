@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">CatsGo</string>
+    <string name="catsgo"><b>cats</b>go</string>
+    <string name="requests">Talepler</string>
+    <string name="pet_owner_note">Kedim hareket etmeyi ve yükseklerde dolaşmayı aşırı sever. Sabah 10.00 ve Akşam 19.00’ da ise mama saatleridir.</string>
+    <string name="messages">Mesajlar</string>
+    <string name="thanks_with_folded_hands_emoji">Tamamdır, teşekkürler &#128591;</string>
+
+    <string name="mon">Pzt</string>
+    <string name="tue">Sal</string>
+    <string name="wed">Çar</string>
+    <string name="thu">Per</string>
+    <string name="fri">Cum</string>
+    <string name="sat">Cmt</string>
+    <string name="sun">Paz</string>
+    <string name="jan">Ocak</string>
+    <string name="feb">Şubat</string>
+    <string name="mar">Mart</string>
+    <string name="apr">Nisan</string>
+    <string name="may">Mayıs</string>
+    <string name="jun">Haziran</string>
+    <string name="jul">Temmuz</string>
+    <string name="aug">Ağustos</string>
+    <string name="sep">Eylül</string>
+    <string name="oct">Ekim</string>
+    <string name="nov">Kasım</string>
+    <string name="dec">Aralık</string>
+</resources>

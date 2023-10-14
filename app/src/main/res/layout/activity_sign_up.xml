@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app"
+    tools:context=".ui.activity.SignUpActivity">
+
+    <FrameLayout
+        android:id="@+id/frameTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:orientation="horizontal"
+        android:background="@color/background_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_bold"
+                android:text="cats"
+                android:textColor="@color/text_heading"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_regular"
+                android:text="go"
+                android:textColor="@color/text_heading"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:elevation="-5dp"
+        android:overScrollMode="never"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="100dp"
+        android:paddingBottom="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:gravity="start"
+                android:text="Kayıt Ol"
+                android:textColor="@color/color_4B4B4B"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="start"
+                android:text="Aramıza katılmak için lütfen bilgilerinizi doldurun."
+                android:textColor="@color/color_4B4B4B"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Adınız ve Soyadınız"
+                android:textColor="@color/color_4B4B4B"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/linearFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_20_edittext_corner"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@color/none"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Adınız ve Soyadınız"
+                    android:inputType="textCapWords"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="13dp"
+                    android:textColor="@color/text_heading"
+                    android:textCursorDrawable="@null"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Telefon Numaranız"
+                android:textColor="@color/color_4B4B4B"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/linearPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_20_edittext_corner"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/none"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingStart="20dp"
+                    android:text="+90 "
+                    android:textColor="@color/text_heading"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/etPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@color/none"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="5XX XXX XX XX"
+                    android:inputType="phone"
+                    android:maxLength="13"
+                    android:paddingVertical="13dp"
+                    android:textColor="@color/text_heading"
+                    android:textCursorDrawable="@null"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="E-Posta Adresiniz"
+                android:textColor="@color/color_4B4B4B"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/linearEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_20_edittext_corner"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:maxLength="50"
+                    android:background="@color/none"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="E-Posta Adresiniz"
+                    android:inputType="textEmailAddress"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="13dp"
+                    android:textColor="@color/text_heading"
+                    android:textCursorDrawable="@null"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="40dp"
+        android:background="@drawable/round_20_light_blue"
+        android:paddingHorizontal="20dp"
+        android:text="Devam Et"
+        android:textAllCaps="false"
+        android:textColor="@color/color_4B4B4B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

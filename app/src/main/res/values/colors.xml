@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background_app">#FDFAF5</color>
+    <color name="text_heading">#4B4B4B</color>
+    <color name="border_dark_blue">#315973</color>
+    <color name="color_717171">#717171</color>
+    <color name="border_color_cat_info">#D9D9D9</color>
+    <color name="light_blue">#C5DFFA</color>
+    <color name="dark_blue">#738EAB</color>
+    <color name="light_blue_shadow_half">#80C5DFFA</color>
+    <color name="light_red">#ED7575</color>
+    <color name="color_4B4B4B">#4B4B4B</color>
+    <color name="bottom_menu_text">#909090</color>
+    <color name="bottom_menu_text_clicked">#C5DFFA</color>
+    <color name="edittext_add_cat">#8d8d8d</color>
+    <color name="none">#00FDFBFB</color>
+    <color name="black_1C1C24">#1C1C24</color>
+    <color name="color_434343">#434343</color>
+    <color name="send_message_background">#F4F4F4</color>
+    <color name="color_c1c1c1">#c1c1c1</color>
+    <color name="red_offer_alert">#C30000</color>
+    <color name="background_shadow_linear">#33000000</color>
+    <color name="background_shadow_linear_50">#40979292</color>
+</resources>

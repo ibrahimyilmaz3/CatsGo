@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainCon"
+    tools:context=".ui.activity.ClinicActivity">
+
+    <FrameLayout
+        android:id="@+id/linearHeadingNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_app"
+        android:elevation="0dp"
+        android:gravity="start|center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="40dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="start|center_vertical"
+                android:src="@drawable/arrow_left" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvPastReservations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Klinik Bilgilerim"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/mainNested"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/background_app"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearHeadingNotification">
+
+        <LinearLayout
+            android:id="@+id/mainLinear"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Vergi Levhanız"
+                android:textColor="@color/color_4B4B4B"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/linearTaxBoard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_20_edittext_corner"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/etTaxBoard"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@color/none"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center_vertical"
+                    android:hint="Ekle"
+                    android:paddingHorizontal="20dp"
+                    android:textColor="@color/text_heading"
+                    android:textCursorDrawable="@null"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/attach"
+                    app:tint="@color/text_heading" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearNot"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_20_shadow_bottom_10"
+                android:gravity="center|start"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:id="@+id/linearAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="IBAN"
+                        android:textColor="@color/color_717171"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="10dp"
+                    android:background="@color/border_color_cat_info" />
+
+                <LinearLayout
+                    android:id="@+id/linearUnread"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvUnread"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Hesap Numarası"
+                        android:textColor="@color/color_717171"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linIBAN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="IBAN"
+                    android:textColor="@color/color_4B4B4B"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/linearIBAN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_20_edittext_corner"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/none"
+                        android:gravity="center"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="TR"
+                        android:maxLength="35"
+                        android:paddingStart="20dp"
+                        android:paddingVertical="13dp"
+                        android:textColor="@color/text_heading"
+                        android:textCursorDrawable="@null"
+                        android:textSize="12sp" />
+
+
+                    <EditText
+                        android:id="@+id/etIBAN"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@color/none"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="phone"
+                        android:maxLength="28"
+                        android:paddingEnd="20dp"
+                        android:paddingStart="5dp"
+                        android:paddingVertical="13dp"
+                        android:textColor="@color/text_heading"
+                        android:textCursorDrawable="@null"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Alıcı Adı ve Soyadı"
+                    android:textColor="@color/color_4B4B4B"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/linearName1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_20_edittext_corner"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etName1"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@color/none"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="Alıcı Adı ve Soyadı"
+                        android:inputType="textCapWords"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="13dp"
+                        android:textColor="@color/text_heading"
+                        android:textCursorDrawable="@null"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Hesap Numaranız"
+                    android:textColor="@color/color_4B4B4B"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/linearNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_20_edittext_corner"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@color/none"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="Hesap Numaranız"
+                        android:inputType="phone"
+                        android:maxLength="20"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="13dp"
+                        android:textColor="@color/text_heading"
+                        android:textCursorDrawable="@null"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Şube Kodu"
+                    android:textColor="@color/color_4B4B4B"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/linearBranch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_20_edittext_corner"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etBranch"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@color/none"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="Şube Kodu"
+                        android:inputType="phone"
+                        android:maxLength="20"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="13dp"
+                        android:textColor="@color/text_heading"
+                        android:textCursorDrawable="@null"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Alıcı Adı ve Soyadı"
+                    android:textColor="@color/color_4B4B4B"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/linearName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_20_edittext_corner"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etName2"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@color/none"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="Alıcı Adı ve Soyadı"
+                        android:inputType="textCapWords"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="13dp"
+                        android:textColor="@color/text_heading"
+                        android:textCursorDrawable="@null"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp"
+        android:background="@drawable/round_20_light_blue"
+        android:paddingHorizontal="20dp"
+        android:text="Onayla"
+        android:textAllCaps="false"
+        android:textColor="@color/color_4B4B4B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

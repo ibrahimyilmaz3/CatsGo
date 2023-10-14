@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background_app"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".ui.activity.UserLoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/background_app"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_bold"
+                android:text="cats"
+                android:textColor="@color/text_heading"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_regular"
+                android:text="go"
+                android:textColor="@color/text_heading"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_marginTop="40dp"
+            android:text="Hoş Geldiniz!"
+            android:textColor="@color/color_4B4B4B"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:textSize="24sp"/>
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="Uygulamanıza devam edebilmeniz için
+lütfen bilgilerinizi doldurun."
+            android:textColor="@color/color_4B4B4B"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Telefon Numaranız"
+            android:textColor="@color/color_4B4B4B"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/linearPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_20_edittext_corner"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/none"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingStart="20dp"
+                android:text="+90 "
+                android:textColor="@color/text_heading"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/etPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/none"
+                android:cursorVisible="false"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="5XX XXX XX XX"
+                android:inputType="phone"
+                android:maxLength="13"
+                android:paddingEnd="20dp"
+                android:textColor="@color/text_heading"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginVertical="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/round_20_light_blue"
+        android:paddingHorizontal="20dp"
+        android:text="Devam Et"
+        android:textAllCaps="false"
+        android:textColor="@color/color_4B4B4B" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
